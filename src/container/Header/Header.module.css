@@ -1,5 +1,5 @@
  .header{
-    background-color:#363F5A;
+    background-color:#083451;
 }
 
 .header__logo{
@@ -10,10 +10,28 @@
 .link__item{
     color:#fff;
     font-size:20px;
-    font-weight: 700;
+    font-weight: 400;
 
     position: relative;
-    margin-right: 45px;
+    margin-right: 20px;
+}
+
+.header__account{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    padding:3px;
+
+    background-color: #fff;
+    color:#083451;
+}
+
+.header__account_item{
+    color:#fff;  
+    font-weight: 700;
+    padding: .6em 1em;
+    border:1px solid #fff;
 }
 
 .header__hover{
@@ -22,7 +40,7 @@
 
     position: absolute;
     left:50%;
-    top:130%;
+    top:200%;
     transform:translate3d(-50%, 0% , 0);
 
     width: 40px;
@@ -32,6 +50,7 @@
     transition: all .5s ease;
 }
 .link__item:hover .header__hover{
+    top:130%;
     opacity: 1;
 }
 .link__item:last-child{

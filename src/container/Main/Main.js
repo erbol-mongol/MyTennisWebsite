@@ -15,6 +15,7 @@ import Contacs from '../../components/MainComponents/Route/Contacts/Contacts';
 
 import SignInPage from '../../components/FirebaseComponents/SIngIn';
 import SignUpPage from '../../components/FirebaseComponents/SingUp';
+import Home from '../../components/FirebaseComponents/Home';
 
 
 
@@ -33,8 +34,9 @@ export default class Main extends Component {
                     <Route path = {ROUTES.NEWS}        render = {() => <News/>}/>
                     <Route path = {ROUTES.GALLERY}     render = {() => <Gallery/>}/>
                     <Route path = {ROUTES.RANKING}     render = {() => <Ranking/>}/>
-                    <Route path = {ROUTES.SIGN_IN}     render = {SignInPage}/>
-                    <Route path = {ROUTES.SIGN_UP}     render = {SignUpPage}/>
+                    <Route path = {ROUTES.SIGN_IN}     component = {SignInPage}/>
+                    <Route path = {ROUTES.SIGN_UP}     component = {SignUpPage}/>
+                    <Route path = {ROUTES.HOME}        component = {Home}/>
                 </div>
             </div>
         )

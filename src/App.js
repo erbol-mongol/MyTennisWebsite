@@ -4,7 +4,8 @@ import {Route , BrowserRouter as Router} from 'react-router-dom';
 import './App.css';
 import Slider from './container/Slider/Slider';
 
-import * as ROUTES  from './constants/routes'
+import * as ROUTES  from './constants/routes';
+import {withAuthentication} from './components/FirebaseComponents/Session'
 
 import Header from './container/Header/Header';
 import Main from './container/Main/Main';
@@ -25,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthentication(App) ;

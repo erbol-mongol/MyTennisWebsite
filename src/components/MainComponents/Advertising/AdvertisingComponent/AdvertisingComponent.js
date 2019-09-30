@@ -5,7 +5,7 @@ import modole from '../Advertising.module.css';
 const AdvertisingComponent = props =>{
     return (
         <div className = 'side__block'>
-
+            
         </div>
     )
 }

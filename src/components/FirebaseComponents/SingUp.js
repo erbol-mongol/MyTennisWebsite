@@ -22,7 +22,6 @@ const INITIAL_STATE = {
 class SignUpFormBase extends Component {
   constructor(props) {
     super(props);
-
     this.state = { ...INITIAL_STATE };
   }
 
@@ -35,11 +34,11 @@ class SignUpFormBase extends Component {
         this.setState({ ...INITIAL_STATE });
         this.props.history.push(ROUTES.LANDING);
       })
+
       .catch(error => {
         this.setState({ error });
       });
-
-    event.preventDefault();
+      event.preventDefault();
   };
 
   onChange = event => {
@@ -47,19 +46,9 @@ class SignUpFormBase extends Component {
   };
 
   render() {
-    const {
-      username,
-      email,
-      passwordOne,
-      passwordTwo,
-      error,
-    } = this.state;
+    const { username,email,passwordOne,passwordTwo,error} = this.state;
 
-    const isInvalid =
-      passwordOne !== passwordTwo ||
-      passwordOne === '' ||
-      email === '' ||
-      username === '';
+    const isInvalid = passwordOne !== passwordTwo || passwordOne === '' || email === '' || username === '';
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -68,8 +57,8 @@ class SignUpFormBase extends Component {
           value={username}
           onChange={this.onChange}
           type="text"
-          placeholder="Full Name"
-        />
+          placeholder="Full Name"/>
+
         <input
           name="email"
           value={email}
@@ -91,11 +80,9 @@ class SignUpFormBase extends Component {
           type="password"
           placeholder="Confirm Password"/>
         
-        <button disabled={isInvalid} type="submit">
-          Sign Up
-        </button>
-
+        <button disabled={isInvalid} type="submit">Sign Up</button>
         {error && <p>{error.message}</p>}
+
       </form>
     );
   }
@@ -108,5 +95,4 @@ const SignUpLink = () => (
 const SignUpForm = withRouter(withFirebase(SignUpFormBase));
 
 export default SignUpPage;
-
 export { SignUpForm, SignUpLink };
