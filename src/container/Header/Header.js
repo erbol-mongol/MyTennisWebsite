@@ -13,7 +13,7 @@ const Header = () =>{
     return(
         <header className = {module.header}>
             <div className = 'container flex-container'>
-                <img className = {module.header__logo} src ={Logo} alt = 'Logo'/>
+            <Link to = {ROUTES.LANDING} className = {module.link__item}><img className = {module.header__logo} src ={Logo} alt = 'Logo'/></Link>
                 <div className = {module.link__container}>
                     <Link to = {ROUTES.LANDING} className = {module.link__item}>О нас <div className = {module.header__hover}/></Link>
                     <Link to = {ROUTES.TOURNAMENTS}  className = {module.link__item}>Турниры <div className = {module.header__hover}/></Link>
@@ -33,7 +33,7 @@ const Header = () =>{
 
 const NavAuth = () => {
     return (         
-        <Link to = {ROUTES.HOME} className = {module.link__item}>
+        <Link to = {ROUTES.ACCOUNT} className = {module.link__item}>
             <img className = {module.header__account} src = {Account}/> 
         </Link>
     )

@@ -28,10 +28,14 @@
 }
 
 .header__account_item{
-    color:#fff;  
     font-weight: 700;
+    text-align: center;
+
     padding: .6em 1em;
+    display: block;
+
     border:1px solid #fff;
+    color:#fff;  
 }
 
 .header__hover{
