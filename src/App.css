@@ -24,3 +24,19 @@ body ,html {
   justify-content: space-between;
   align-items:center;
 }
+
+
+.amaOpacity{
+  position:fixed;
+  top:0;
+  left:0;
+  
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #000;
+
+  z-index: 5;
+  opacity: .5;
+  
+}
