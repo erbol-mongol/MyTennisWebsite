@@ -1,5 +1,5 @@
 import React, {Component} from  'react';
-import {Switch,Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 
 import './Main.css';
 import * as ROUTES from '../../constants/routes';
@@ -13,8 +13,9 @@ import Tournaments from '../../components/MainComponents/Route/Tournaments/Tourn
 import AboutUs from '../../components/MainComponents/Route/AboutUs/AboutUs';
 import Contacs from '../../components/MainComponents/Route/Contacts/Contacts';
 
-import SignInPage from '../../components/FirebaseComponents/SIngIn';
-import SignUpPage from '../../components/FirebaseComponents/SingUp';
+import Account from '../../components/FirebaseComponents/Account';
+import PasswordForgetPage from '../../components/FirebaseComponents/PasswordForget';
+import SignBlock from '../../components/FirebaseComponents/SignBlock/SignBlock';
 
 
 
@@ -28,13 +29,18 @@ export default class Main extends Component {
                 <Announcements/>
                 <div className = 'main__switch'>
                     <Route exact path = {ROUTES.LANDING}  render = {() => <AboutUs/>}/>
+                    <Route exact path = {ROUTES.SIGN_IN}  render = {() => <AboutUs/>}/>
+                    <Route exact path = {ROUTES.SIGN_UP}  render = {() => <AboutUs/>}/>
+
                     <Route path = {ROUTES.TOURNAMENTS} render = {() => <Tournaments/>}/>
                     <Route path = {ROUTES.CONTACTS}    render = {() => <Contacs/>}/>
                     <Route path = {ROUTES.NEWS}        render = {() => <News/>}/>
                     <Route path = {ROUTES.GALLERY}     render = {() => <Gallery/>}/>
                     <Route path = {ROUTES.RANKING}     render = {() => <Ranking/>}/>
-                    <Route path = {ROUTES.SIGN_IN}     render = {SignInPage}/>
-                    <Route path = {ROUTES.SIGN_UP}     render = {SignUpPage}/>
+                    <Route path = {ROUTES.SIGN_IN}     component = {SignBlock}/>
+                    <Route path = {ROUTES.SIGN_UP}     component = {SignBlock}/>
+                    <Route path = {ROUTES.ACCOUNT}     component = {Account}/>
+                    <Route path = {ROUTES.PASSWORD_FORGET}     component = {PasswordForgetPage  }/>
                 </div>
             </div>
         )

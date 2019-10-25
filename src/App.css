@@ -13,7 +13,7 @@ body ,html {
 }
 
 .container{
-  max-width: 1300px;
+  max-width: 1200px;
   width:100%;
 
   margin: 0 auto;
@@ -23,4 +23,20 @@ body ,html {
   display:flex;
   justify-content: space-between;
   align-items:center;
+}
+
+
+.amaOpacity{
+  position:fixed;
+  top:0;
+  left:0;
+  
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #000;
+
+  z-index: 5;
+  opacity: .5;
+  
 }
